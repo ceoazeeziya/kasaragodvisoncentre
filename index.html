@@ -3,11 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="description"
-        content="KSD Vision Centre - Professional Eye Care in Kasaragod. Expert ophthalmologists providing comprehensive eye examinations, cataract surgery, LASIK, and more.">
-    <meta name="keywords" content="eye clinic, ophthalmologist, eye care, cataract surgery, LASIK, Kasaragod">
-    <title>KSD Vision Centre - Best Eye Care in Kasaragod</title>
+        content="KSD Vision Centre - Professional Eye Hospital in Kasaragod. Expert ophthalmologists providing comprehensive eye examinations, cataract surgery, LASIK, and more.">
+    <meta name="keywords" content="eye hospital, ophthalmologist, eye care, cataract surgery, LASIK, Kasaragod">
+    <meta name="theme-color" content="#1a56db">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>KSD Vision Centre - Best Eye Hospital in Kasaragod</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,43 +28,61 @@
 
 <body>
 
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
     <!-- Header/Navigation -->
     <header class="header" id="header">
-        <div class="container">
-            <nav class="navbar">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <img src="images/logo-text.png" alt="KSD Vision Centre" class="logo-brand-img">
+            </div>
 
-                <div class="nav-brand">
-                    <img src="images/logo-text.png" alt="Kasaragod Vision Center" class="logo-brand-img">
-                </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">HOME</a></li>
+                <li><a href="#about" class="nav-link">ABOUT US</a></li>
+                <li><a href="#services" class="nav-link">SERVICES</a></li>
+                <li><a href="#doctors" class="nav-link">DOCTORS</a></li>
+                <li><a href="#contact" class="nav-link">CONTACT</a></li>
+            </ul>
 
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="#home" class="nav-link active">HOME</a></li>
-                    <li><a href="#about" class="nav-link">ABOUT US</a></li>
-                    <li><a href="#services" class="nav-link">SERVICES</a></li>
-                    <li><a href="#doctors" class="nav-link">DOCTORS</a></li>
-                    <li><a href="#contact" class="nav-link">CONTACT US</a></li>
-                </ul>
-
-                <div class="nav-actions">
-                    <div class="contact-info">
-                        <i class="fas fa-phone-alt"></i>
-                        <span>9037022226</span>
-                    </div>
-                    <a href="#appointment" class="btn btn-primary">Book Appointment</a>
-                    <button class="mobile-toggle" id="mobileToggle">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
-            </nav>
-        </div>
+            <div class="nav-actions">
+                <a href="tel:9037022226" class="nav-phone">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>9037022226</span>
+                </a>
+                <a href="https://wa.me/919037022226" target="_blank" class="btn btn-success btn-nav">
+                    <i class="fab fa-whatsapp"></i>
+                    WhatsApp
+                </a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
     </header>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/919037022226" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav" id="mobileBottomNav">
+        <a href="#home" class="bottom-nav-item active" data-section="home">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="#services" class="bottom-nav-item" data-section="services">
+            <i class="fas fa-eye"></i>
+            <span>Services</span>
+        </a>
+        <a href="#doctors" class="bottom-nav-item" data-section="doctors">
+            <i class="fas fa-user-md"></i>
+            <span>Doctors</span>
+        </a>
+        <a href="tel:9037022226" class="bottom-nav-item bottom-nav-call">
+            <i class="fas fa-phone-alt"></i>
+            <span>Call</span>
+        </a>
+    </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
@@ -69,21 +90,22 @@
             <div class="gradient-orb orb-1"></div>
             <div class="gradient-orb orb-2"></div>
             <div class="gradient-orb orb-3"></div>
+            <div class="hero-grid-pattern"></div>
         </div>
 
-        <div class="container">
+        <div class="hero-inner">
             <div class="hero-content">
                 <div class="hero-left">
                     <div class="badge">
-                        <i class="fas fa-star"></i>
-                        <span>PROFESSIONAL</span>
+                        <i class="fas fa-hospital"></i>
+                        <span>TRUSTED EYE HOSPITAL</span>
                     </div>
                     <h1 class="hero-title">
-                        BEST <span class="highlight">EYE CARE</span> IN TOWN
+                        Your Vision, <br>Our <span class="highlight">Mission</span>
                     </h1>
                     <p class="hero-subtitle">
-                        We offer quality eye care at affordable prices without compromise on services or expertise. Your
-                        vision is our mission.
+                        Providing quality eye care at affordable prices with expert ophthalmologists and
+                        state-of-the-art technology. See the world clearly with KSD Vision Centre.
                     </p>
 
                     <div class="hero-features">
@@ -102,12 +124,16 @@
                     </div>
 
                     <div class="hero-cta">
-                        <a href="#appointment" class="btn btn-success btn-lg">
-                            <i class="fas fa-calendar-check"></i>
-                            BOOK APPOINTMENT
+                        <a href="tel:9037022226" class="btn btn-success btn-lg">
+                            <i class="fas fa-phone-alt"></i>
+                            CALL NOW
+                        </a>
+                        <a href="https://wa.me/919037022226" target="_blank" class="btn btn-whatsapp btn-lg">
+                            <i class="fab fa-whatsapp"></i>
+                            WHATSAPP
                         </a>
                         <a href="#services" class="btn btn-outline btn-lg">
-                            LEARN MORE
+                            OUR SERVICES
                         </a>
                     </div>
                 </div>
@@ -128,70 +154,58 @@
                         <div class="floating-element equipment">
                             <i class="fas fa-microscope"></i>
                         </div>
+                        <div class="floating-element patients-card">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <strong>9000+</strong>
+                                <span>Happy Patients</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Appointment Form -->
-            <div class="appointment-form-inline" id="appointment">
-                <h3>Book An Appointment</h3>
-                <form id="appointmentForm" class="inline-form">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <input type="tel" name="phone" placeholder="Phone Number" required pattern="[0-9]{10}">
-                    <input type="date" name="date" required>
-                    <select name="service">
-                        <option value="">Select Service</option>
-                        <option value="comprehensive">Comprehensive Eye Exam</option>
-                        <option value="cataract">Cataract Surgery</option>
-                        <option value="lasik">LASIK Surgery</option>
-                        <option value="glaucoma">Glaucoma Treatment</option>
-                        <option value="pediatric">Pediatric Care</option>
-                        <option value="other">Other</option>
-                    </select>
-                    <button type="submit" class="btn btn-success">
-                        <i class="fas fa-paper-plane"></i>
-                        Book An Appointment
-                    </button>
-                </form>
+            <div class="hero-scroll-indicator">
+                <span>Scroll Down</span>
+                <div class="scroll-arrow"></div>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
     <section class="features">
-        <div class="container">
+        <div class="section-inner">
             <div class="features-grid">
-                <div class="feature-card">
+                <div class="feature-card" data-aos>
                     <div class="feature-icon">
                         <i class="fas fa-user-md"></i>
                     </div>
-                    <h3>Experience Doctors</h3>
-                    <p>Our team of expert ophthalmologists brings years of specialized experience</p>
+                    <h3>Experienced Doctors</h3>
+                    <p>Our team of expert ophthalmologists brings years of specialized experience in eye care</p>
                 </div>
 
-                <div class="feature-card">
+                <div class="feature-card" data-aos>
                     <div class="feature-icon">
                         <i class="fas fa-award"></i>
                     </div>
                     <h3>Premier Treatment</h3>
-                    <p>State-of-the-art treatments with the highest standards of care</p>
+                    <p>State-of-the-art treatments with the highest standards of medical care</p>
                 </div>
 
-                <div class="feature-card">
+                <div class="feature-card" data-aos>
                     <div class="feature-icon">
                         <i class="fas fa-microscope"></i>
                     </div>
-                    <h3>Top Dental Equipment</h3>
-                    <p>Advanced diagnostic and surgical equipment for precise treatments</p>
+                    <h3>Top Eye Equipment</h3>
+                    <p>Advanced diagnostic and surgical equipment for precise eye treatments</p>
                 </div>
 
-                <div class="feature-card">
+                <div class="feature-card" data-aos>
                     <div class="feature-icon">
-                        <i class="fas fa-clock"></i>
+                        <i class="fas fa-stethoscope"></i>
                     </div>
-                    <h3>24/7 Advanced Care</h3>
-                    <p>Emergency eye care services available when you need them most</p>
+                    <h3>Comprehensive Care</h3>
+                    <p>Personalized attention and expert diagnostics for all your vision needs</p>
                 </div>
             </div>
         </div>
@@ -199,75 +213,92 @@
 
     <!-- Services Section -->
     <section class="services" id="services">
-        <div class="container">
+        <div class="section-inner">
             <div class="section-header">
                 <span class="section-badge">OUR SERVICES</span>
-                <h2 class="section-title">Best Eye Service For You</h2>
+                <h2 class="section-title">Comprehensive Eye Care Services</h2>
+                <p class="section-desc">World-class eye care with advanced treatments and compassionate service</p>
             </div>
 
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card" data-aos>
                     <div class="service-icon">
                         <img src="images/service-comprehensive.png" alt="Comprehensive Eye Examination">
                     </div>
-                    <h3>Comprehensive Eye Examination</h3>
-                    <p>Complete eye health assessment with advanced diagnostic tools</p>
+                    <div class="service-body">
+                        <h3>Comprehensive Eye Examination</h3>
+                        <p>Complete eye health assessment with advanced diagnostic tools</p>
+                    </div>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card" data-aos>
                     <div class="service-icon">
                         <img src="images/service-cataract.png" alt="Cataract Surgery">
                     </div>
-                    <h3>Cataract Surgery</h3>
-                    <p>Advanced phacoemulsification with premium IOL options</p>
+                    <div class="service-body">
+                        <h3>Cataract Surgery</h3>
+                        <p>Advanced phacoemulsification with premium IOL options</p>
+                    </div>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card" data-aos>
                     <div class="service-icon">
                         <img src="images/service-lasik.png" alt="LASIK Surgery">
                     </div>
-                    <h3>LASIK/Refractive Surgery</h3>
-                    <p>Bladeless LASIK for vision correction and freedom from glasses</p>
+                    <div class="service-body">
+                        <h3>LASIK / Refractive Surgery</h3>
+                        <p>Bladeless LASIK for vision correction and freedom from glasses</p>
+                    </div>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card" data-aos>
                     <div class="service-icon">
                         <img src="images/service-glaucoma.png" alt="Glaucoma Treatment">
                     </div>
-                    <h3>Glaucoma Treatment</h3>
-                    <p>Medical and surgical management of glaucoma</p>
+                    <div class="service-body">
+                        <h3>Glaucoma Treatment</h3>
+                        <p>Medical and surgical management of glaucoma</p>
+                    </div>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card" data-aos>
                     <div class="service-icon">
                         <img src="images/service-diabetic.png" alt="Diabetic Retinopathy">
                     </div>
-                    <h3>Diabetic Retinopathy</h3>
-                    <p>Specialized care for diabetes-related eye conditions</p>
+                    <div class="service-body">
+                        <h3>Diabetic Retinopathy</h3>
+                        <p>Specialized care for diabetes-related eye conditions</p>
+                    </div>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card" data-aos>
                     <div class="service-icon">
                         <i class="fas fa-child"></i>
                     </div>
-                    <h3>Pediatric Ophthalmology</h3>
-                    <p>Expert eye care for children with specialized treatments</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-contact-lens"></i>
+                    <div class="service-body">
+                        <h3>Pediatric Ophthalmology</h3>
+                        <p>Expert eye care for children with specialized treatments</p>
                     </div>
-                    <h3>Contact Lens Services</h3>
-                    <p>Professional fitting and care for all types of contact lenses</p>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card" data-aos>
+                    <div class="service-icon">
+                        <i class="fas fa-glasses"></i>
+                    </div>
+                    <div class="service-body">
+                        <h3>Contact Lens Services</h3>
+                        <p>Professional fitting and care for all types of contact lenses</p>
+                    </div>
+                </div>
+
+                <div class="service-card" data-aos>
                     <div class="service-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Cornea Services</h3>
-                    <p>Treatment for corneal diseases and transplant services</p>
+                    <div class="service-body">
+                        <h3>Cornea Services</h3>
+                        <p>Treatment for corneal diseases and transplant services</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -275,34 +306,40 @@
 
     <!-- About/Stats Section -->
     <section class="about" id="about">
-        <div class="container">
+        <div class="section-inner">
             <div class="about-content">
                 <div class="about-left">
-                    <span class="section-badge">REGULAR SERVICE</span>
-                    <h2 class="section-title">Your Great Vision Begins With A Great Ophthalmologist</h2>
+                    <span class="section-badge">ABOUT US</span>
+                    <h2 class="section-title left-align">Your Great Vision Begins With A Great Ophthalmologist</h2>
 
                     <div class="about-features">
-                        <div class="about-feature">
-                            <i class="fas fa-check-circle"></i>
+                        <div class="about-feature" data-aos>
+                            <div class="about-feature-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
                             <div>
-                                <h4>Premium Vision</h4>
-                                <p>Cutting-edge technology for superior outcomes</p>
+                                <h4>Premium Vision Care</h4>
+                                <p>Cutting-edge technology for superior outcomes in every procedure</p>
                             </div>
                         </div>
 
-                        <div class="about-feature">
-                            <i class="fas fa-check-circle"></i>
+                        <div class="about-feature" data-aos>
+                            <div class="about-feature-icon">
+                                <i class="fas fa-laptop-medical"></i>
+                            </div>
                             <div>
                                 <h4>Latest Technologies</h4>
-                                <p>Advanced diagnostic and surgical equipment</p>
+                                <p>Advanced diagnostic and surgical equipment for precise results</p>
                             </div>
                         </div>
 
-                        <div class="about-feature">
-                            <i class="fas fa-check-circle"></i>
+                        <div class="about-feature" data-aos>
+                            <div class="about-feature-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
                             <div>
-                                <h4>All About Care</h4>
-                                <p>Compassionate care with personalized attention</p>
+                                <h4>Compassionate Care</h4>
+                                <p>Personalized attention and care for every patient</p>
                             </div>
                         </div>
                     </div>
@@ -319,22 +356,26 @@
 
                 <div class="about-right">
                     <div class="stats-grid">
-                        <div class="stat-card">
+                        <div class="stat-card" data-aos>
+                            <div class="stat-icon"><i class="fas fa-smile-beam"></i></div>
                             <div class="stat-number" data-target="9000">0</div>
                             <div class="stat-label">Satisfied Patients</div>
                         </div>
 
-                        <div class="stat-card">
+                        <div class="stat-card" data-aos>
+                            <div class="stat-icon"><i class="fas fa-user-md"></i></div>
                             <div class="stat-number" data-target="136">0</div>
                             <div class="stat-label">Eye Experts</div>
                         </div>
 
-                        <div class="stat-card">
+                        <div class="stat-card" data-aos>
+                            <div class="stat-icon"><i class="fas fa-procedures"></i></div>
                             <div class="stat-number" data-target="10000">0</div>
-                            <div class="stat-label">Happy Patients</div>
+                            <div class="stat-label">Surgeries Done</div>
                         </div>
 
-                        <div class="stat-card">
+                        <div class="stat-card" data-aos>
+                            <div class="stat-icon"><i class="fas fa-calendar-check"></i></div>
                             <div class="stat-number" data-target="60">0</div>
                             <div class="stat-label">Years Experience</div>
                         </div>
@@ -346,91 +387,126 @@
 
     <!-- Doctors Section -->
     <section class="doctors" id="doctors">
-        <div class="container">
+        <div class="section-inner">
             <div class="section-header">
-                <span class="section-tag">OUR TEAM</span>
-                <h2 class="section-title">We're Passionate, Dedicated And Friendly...</h2>
+                <span class="section-badge">OUR TEAM</span>
+                <h2 class="section-title">Meet Our Expert Doctors</h2>
+                <p class="section-desc">Passionate, dedicated and experienced eye care specialists</p>
             </div>
 
             <div class="doctors-grid">
-                <div class="doctor-card">
+                <!-- Dr Rakesh -->
+                <div class="doctor-card" data-aos>
                     <div class="doctor-image-card">
-                        <img src="images/doctor-male.png" alt="Dr. Rakesh - Ophthalmologist">
+                        <img src="images/dr.rakesh.jpeg" alt="Dr. Rakesh - Senior Ophthalmologist">
                     </div>
                     <div class="doctor-info">
                         <h3>Dr. Rakesh</h3>
-                        <p class="doctor-qualification">MBBS, MS (Ophthal), DNB, FICO</p>
-                        <p class="doctor-description">Specialist in cataract surgery and comprehensive eye care</p>
+                        <p class="doctor-qualification">MBBS, MS, DNB, FICO</p>
+                        <div class="doctor-description-container">
+                            <p class="doctor-description">
+                                Dr Rakesh did his MBBS from KS Hegde Medical Academy, Mangalore and MS from Minto Hospital, BMC Bangalore. 
+                                <span class="more-text">He is a DNB holder and a Fellow of ICU (International Council of Ophthalmology). He specializes in Phacosurgery with over 6 years of experience at Ahalia Hospital. He did fellowship in cataract and Phacosurgery from Bangalore and Pallakad...</span>
+                            </p>
+                            <button class="read-more-btn">Read More</button>
+                        </div>
                         <div class="doctor-social">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                 </div>
 
-                <div class="doctor-card">
+                <!-- Dr Sameerudeen -->
+                <div class="doctor-card" data-aos>
                     <div class="doctor-image-card">
-                        <img src="images/doctor-female.png" alt="Dr. Prashanthkumar Achar - Ophthalmologist">
+                        <img src="images/Dr.Mohammed.jpeg" alt="Dr. Mohammed Sameerudeen - Chief Ophthalmologist">
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. Mohammed Sameerudeen</h3>
+                        <p class="doctor-qualification">MBBS, DO, DNB</p>
+                        <div class="doctor-description-container">
+                            <p class="doctor-description">
+                                Chief ophthalmologist at Indiana hospital Mangalore. He completed his MBBS from Tumkur, DO from KMC Mangalore, and DNB from Fr Mullins. 
+                                <span class="more-text">Specialized in cataract, refractive and glaucoma surgeries. He completed his Fellowship in anterior segment of eye from Bombay city eye institute. Available every Wednesday.</span>
+                            </p>
+                            <button class="read-more-btn">Read More</button>
+                        </div>
+                        <div class="doctor-social">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dr Prashanth -->
+                <div class="doctor-card" data-aos>
+                    <div class="doctor-image-card">
+                        <img src="images/Dr.Prashantkumar.jpeg" alt="Dr. Prashanthkumar Achar - Eye Specialist">
                     </div>
                     <div class="doctor-info">
                         <h3>Dr. Prashanthkumar Achar</h3>
                         <p class="doctor-qualification">MBBS, MS</p>
-                        <p class="doctor-description">Expert in pediatric ophthalmology and refractive surgery</p>
+                        <div class="doctor-description-container">
+                            <p class="doctor-description">
+                                Dr Prashanthkumar Achar did his MBBS from KMC, Mangalore and MS from Fr Muller medical college. 
+                                <span class="more-text">He was a professor in Ophthamology in Srinivasa Medical college. At present he is the head of the department in Government College, Karwar. He has years of experience in eye surgeries.</span>
+                            </p>
+                            <button class="read-more-btn">Read More</button>
+                        </div>
                         <div class="doctor-social">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                 </div>
 
-                <div class="doctor-card">
+                <!-- Dr Aparna -->
+                <div class="doctor-card" data-aos>
                     <div class="doctor-image-card">
-                        <img src="images/doctor-third.png" alt="Dr. Mohammed Sameerudeen - Ophthalmologist">
+                        <img src="images/Dr. Aparna Bhaskaran.jpeg" alt="Dr. Aparna Bhaskaran - Consultant Ophthalmologist">
                     </div>
                     <div class="doctor-info">
-                        <h3>Dr. Mohammed Sameerudeen</h3>
-                        <p class="doctor-qualification">MBBS, MS, DNB, DO</p>
-                        <p class="doctor-description">Specialist in glaucoma treatment and corneal services</p>
+                        <h3>Dr. Aparna Bhaskaran</h3>
+                        <p class="doctor-qualification">MBBS, MS</p>
+                        <div class="doctor-description-container">
+                            <p class="doctor-description">
+                                Consultant Ophthalmologist who completed her MBBS from KMCT Medical College and MS from KVG Medical College, Sullia. 
+                                <span class="more-text">She currently practices at Kasaragod Vision Centre and Aster MIMS, Kasaragod, providing comprehensive eye care with a patient-centred approach.</span>
+                            </p>
+                            <button class="read-more-btn">Read More</button>
+                        </div>
                         <div class="doctor-social">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="cta-section">
-                <div class="cta-card">
-                    <div class="cta-icon">
-                        <i class="fas fa-phone-volume"></i>
-                    </div>
-                    <div class="cta-content">
-                        <h3>Our Emergency Call</h3>
-                        <a href="tel:9037022226" class="cta-phone">9037022226 / 9037122226</a>
-                    </div>
+    <!-- Appointment CTA Section -->
+    <section class="appointment-cta">
+        <div class="section-inner">
+            <div class="cta-banner">
+                <div class="cta-banner-content">
+                    <h2>Ready for Clear Vision?</h2>
+                    <p>Schedule your appointment today. Call us or reach out via WhatsApp — we're here for you.</p>
                 </div>
-
-                <div class="cta-card">
-                    <div class="cta-icon">
-                        <i class="fas fa-stethoscope"></i>
-                    </div>
-                    <div class="cta-content">
-                        <h3>Our Appointment</h3>
-                        <a href="#appointment" class="btn btn-success">Book Now</a>
-                    </div>
-                </div>
-
-                <div class="cta-card">
-                    <div class="cta-icon">
-                        <i class="fas fa-calendar-alt"></i>
-                    </div>
-                    <div class="cta-content">
-                        <h3>Our Opening Hour</h3>
-                        <p>Mon - Sat: 10:00 AM - 06:00 PM</p>
-                    </div>
+                <div class="cta-banner-actions">
+                    <a href="tel:9037022226" class="btn btn-white btn-lg">
+                        <i class="fas fa-phone-alt"></i>
+                        Call 9037022226
+                    </a>
+                    <a href="https://wa.me/919037022226" target="_blank" class="btn btn-whatsapp-solid btn-lg">
+                        <i class="fab fa-whatsapp"></i>
+                        WhatsApp Us
+                    </a>
                 </div>
             </div>
         </div>
@@ -438,59 +514,79 @@
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
-        <div class="container">
-            <div class="contact-content">
-                <div class="contact-left">
-                    <h2>Get In Touch</h2>
-                    <p>Have questions? We're here to help!</p>
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-badge">GET IN TOUCH</span>
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-desc">Reach out to us for appointments, queries, or emergencies</p>
+            </div>
 
-                    <div class="contact-info-list">
-                        <div class="contact-item">
+            <div class="contact-content">
+                <!-- Contact Action Cards -->
+                <div class="contact-action-card call-card" data-aos>
+                    <div class="action-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>Talk to us directly for appointments and queries</p>
+                    <div class="action-numbers">
+                        <a href="tel:9037022226" class="action-number">
+                            <i class="fas fa-phone"></i> 9037022226
+                        </a>
+                        <a href="tel:9037122226" class="action-number">
+                            <i class="fas fa-phone"></i> 9037122226
+                        </a>
+                    </div>
+                    <a href="tel:9037022226" class="btn btn-primary btn-lg btn-full">
+                        <i class="fas fa-phone-alt"></i> Call Now
+                    </a>
+                </div>
+
+                <div class="contact-action-card whatsapp-card" data-aos>
+                    <div class="action-icon whatsapp-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p>Send us a message anytime on WhatsApp</p>
+                    <div class="whatsapp-preview">
+                        <div class="wp-bubble">
+                            <span>Hi! I'd like to book an appointment 👋</span>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/919037022226?text=Hi!%20I%27d%20like%20to%20book%20an%20appointment"
+                        target="_blank" class="btn btn-whatsapp-solid btn-lg btn-full">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+
+                <div class="contact-action-card info-card" data-aos>
+                    <div class="action-icon info-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <h3>Visit Us</h3>
+                    <div class="info-list">
+                        <div class="info-item">
                             <i class="fas fa-map-marker-alt"></i>
                             <div>
-                                <h4>Address</h4>
-                                <p>Health Mall, Ashwini Nagar, Kasaragod</p>
+                                <strong>Address</strong>
+                                <p>Near Moulavi Book Depot, Old Bus Stand, Kasaragod Kerala, India - 671121</p>
                             </div>
                         </div>
-
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <h4>Phone</h4>
-                                <p>9037022226 / 9037122226</p>
-                            </div>
-                        </div>
-
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>Email</h4>
-                                <p>info@ksdvisioncentre.com</p>
-                            </div>
-                        </div>
-
-                        <div class="contact-item">
+                        <div class="info-item">
                             <i class="fas fa-clock"></i>
                             <div>
-                                <h4>Working Hours</h4>
-                                <p>Monday - Saturday: 10:00 AM - 06:00 PM</p>
+                                <strong>Working Hours</strong>
+                                <p>Mon – Sat: 10:00 AM – 06:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <p>drrakeshophth@gmail.com</p>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="contact-right">
-                    <form id="contactForm" class="contact-form">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <input type="tel" name="phone" placeholder="Phone Number">
-                        <input type="text" name="subject" placeholder="Subject">
-                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                        <button type="submit" class="btn btn-primary btn-lg">
-                            <i class="fas fa-paper-plane"></i>
-                            Send Message
-                        </button>
-                    </form>
                 </div>
             </div>
         </div>
@@ -498,20 +594,19 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
+        <div class="section-inner">
             <div class="footer-content">
-                <div class="footer-col">
-                    <div class="logo">
-                        <i class="fas fa-eye"></i>
-                        <span>KSD Vision Centre</span>
+                <div class="footer-col footer-brand">
+                    <div class="footer-logo">
+                        <img src="images/logo-text.png" alt="KSD Vision Centre" class="footer-logo-img">
                     </div>
-                    <p>Quality eye care at affordable prices without compromise on services or expertise.</p>
+                    <p>Quality eye care at affordable prices without compromise on services or expertise. Your vision
+                        is our mission.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919037022226" target="_blank" aria-label="WhatsApp"><i
+                                class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
@@ -538,34 +633,43 @@
                 </div>
 
                 <div class="footer-col">
-                    <h3>Contact Info</h3>
-                    <ul class="contact-list">
+                    <h3>Reach Us</h3>
+                    <ul class="footer-contact-list">
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
-                            Health Mall, Ashwini Nagar, Kasaragod
+                            <span>Near Moulavi Book Depot, Old Bus Stand, Kasaragod Kerala, India - 671121</span>
                         </li>
                         <li>
-                            <i class="fas fa-phone"></i>
-                            9037022226 / 9037122226
+                            <a href="tel:9037022226">
+                                <i class="fas fa-phone"></i>
+                                <span>9037022226 / 9037122226</span>
+                            </a>
                         </li>
                         <li>
                             <i class="fas fa-envelope"></i>
-                            info@ksdvisioncentre.com
+                            <span>drrakeshophth@gmail.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Mon – Sat: 10 AM – 6 PM</span>
                         </li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2025 Kasaragod Vision Center. All rights reserved. | Designed with <i
-                        class="fas fa-heart"></i> for
-                    better vision</p>
+                <p>&copy; 2026 KSD Vision Centre, Kasaragod. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919037022226" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <!-- Scroll to Top Button -->
-    <button class="scroll-top" id="scrollTop">
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
